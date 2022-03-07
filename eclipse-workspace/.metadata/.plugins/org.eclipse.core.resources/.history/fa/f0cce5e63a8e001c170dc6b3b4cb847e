@@ -1,0 +1,11 @@
+package com.pogocode.list;
+import java.util.*;
+public class ArrayList {
+
+	public static void main(String[] args) {
+		ArrayList list = new ArrayList();
+		list.
+		list.add("Delhi Mumbai 1148 2:10 INR6000");
+	}
+
+}

@@ -1,0 +1,36 @@
+package com.pogocode.list;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import javax.swing.text.html.HTMLDocument.Iterator;
+
+public class ArrayListOperations {
+
+	public static void main(String[] args) {
+		Scanner sc  = new Scanner(System.in);
+		ArrayList<String> list = new ArrayList<String>();
+		
+		list.add("Delhi Mumbai 1148 2:10 INR6000");
+		list.add("Delhi London 6704 8:55 INR37000");
+		list.add("Delhi Bengaluru 1740 2:30 INR9000");
+		list.add("Delhi Singapore 4160 5:30 INR12500");
+		list.add("Delhi Frankfurt 6117 8:35 INR32000");
+		list.add("Mumbai London 7187 9:30 INR28000");
+		list.add("Mumbai Bengaluru 845 1:32 INR4200");
+		list.add("Mumbai Frankfurt 6209 8:55 INR25000");
+		list.add("Bengaluru Singapore 3180 4:25 INR8500");
+		
+		
+		 
+		System.out.println(list.get(2)); 
+		
+		
+		
+		
+		
+		sc.close();
+
+	}
+
+}

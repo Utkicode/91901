@@ -1,0 +1,27 @@
+package com.utkicode.audio;
+
+import java.io.File;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+
+public class AudioTest {
+
+	public static void main(String[] args) {
+		
+	}
+	public void playSound() {
+	    try {
+	        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("C:\\Users\\91901\\Desktop\\Om-Namah-Shivaya-By-Anuradha-Paudwal.mp3").getAbsoluteFile());
+	        Clip clip = AudioSystem.getClip();
+	        clip.open(audioInputStream);
+	        clip.start();
+	        System.out.println("Start Playing!");
+	    } catch(Exception ex) {
+	        System.out.println("Error with playing sound.");
+	        ex.printStackTrace();
+	    }
+	}
+
+}

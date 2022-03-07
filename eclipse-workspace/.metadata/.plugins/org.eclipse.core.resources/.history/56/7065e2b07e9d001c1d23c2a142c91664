@@ -1,0 +1,58 @@
+package com.utkicode.patterns;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.function.Consumer;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int size = scanner.nextInt();
+		int[] withTen = new int[size];
+		int[] withoutTen = new int[size];
+		int[] result = new int[size];
+		for(int i = 0; i<size; i++)
+		{
+			withTen[i] = scanner.nextInt();
+		}
+		
+		for(int i = 0; i<size; i++)
+		{
+			System.out.print(withTen[i] + "  ");
+		}
+		for(Integer i = 0; i<size; i++)
+		{
+			if(withTen[i] == 10)
+			{
+				withoutTen[i] = 0;
+			}
+			else
+			{
+				withoutTen[i] = withTen[i];
+				
+			}
+		}
+		System.out.println();
+		for(int i = 0; i<size; i++)
+		{
+			System.out.print(withoutTen[i] + "  ");
+		}
+		for(Integer i = 0; i<size-1; i++)
+		{
+			if(withoutTen[i] == 0)
+			{
+				result[size-i-1] = withoutTen[i]; 
+			}
+			else
+			{
+				result[i] = withoutTen[i];
+			}
+		}
+		System.out.println();
+		for(int i = 0; i<size; i++)
+		{
+			System.out.print(result[i] + "  ");
+		}
+	}
+}

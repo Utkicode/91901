@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;rows&apos; in &apos;com.utkicode.patterns.Pattern01.main(...)&apos; to &apos;n&apos;&#x0D;&#x0A;- Original project: &apos;Patterns&apos;&#x0D;&#x0A;- Original element: &apos;com.utkicode.patterns.Pattern01.main(String[]).rows&apos;&#x0D;&#x0A;- Renamed element: &apos;rows&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;rows&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;com.utkicode.patterns{Pattern01.java[Pattern01~main~\[QString;@rows!177!200!181!184!I!0!false" name="n" references="true" stamp="1639188747882" version="1.0"/>
+</session>

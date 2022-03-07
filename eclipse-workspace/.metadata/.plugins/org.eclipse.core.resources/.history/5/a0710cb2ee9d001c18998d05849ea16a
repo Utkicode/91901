@@ -1,0 +1,25 @@
+import java.util.*; 
+import java.io.*;
+
+class Main {
+
+  public static String SearchingChallenge(String str) {
+    // ccode goes here  
+    for(char s : str.toCharArray())
+    {
+      if(str.indexOf(s) == str.lastIndexOf(s))
+      {
+        str = s+"";
+        
+      }
+    }
+    return str;
+  }
+
+  public static void main (String[] args) {  
+    // keep this function call here     
+    Scanner s = new Scanner(System.in);
+    System.out.print(SearchingChallenge(s.nextLine())); 
+  }
+
+}

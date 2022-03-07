@@ -1,0 +1,39 @@
+package com.utkicode.audio;
+
+import java.io.File;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineEvent;
+import javax.sound.sampled.LineListener;
+
+public class AudioTest {
+
+	public static void main(String[] args) {
+		AudioTest audioTest = new AudioTest();
+		audioTest.playSound();
+	}
+	public void playSound() {
+	    try {
+	        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("C:\\Users\\91901\\Downloads\\(DownloadLagu321.Net) Powfu - Death Bed (feat. beabadoobee).wav").getAbsoluteFile());
+	        Clip clip = AudioSystem.getClip();
+	        clip.open(audioInputStream);
+	        clip.addLineListener(new LineListener() {
+	            public void update(LineEvent event) {
+	                if (event.getType() == LineEvent.Type.STOP) {
+	                    event.getLine().close();
+	                    System.exit(0);
+	                }
+	            }
+	        });
+	        clip.start();
+	        
+	        System.out.println("Start Playing!");
+	    } catch(Exception ex) {
+	        System.out.println("Error with playing sound.");
+	        ex.printStackTrace();
+	    }
+	}
+
+}
